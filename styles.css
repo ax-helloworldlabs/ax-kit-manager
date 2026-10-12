@@ -59,11 +59,7 @@ a:focus-visible, summary:focus-visible, button:focus-visible {
 }
 .head { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; }
 .identity { display: flex; align-items: center; gap: 12px; }
-.identity > b {
-  display: grid; place-items: center; flex: none; width: 40px; height: 40px;
-  border-radius: 50%; background: var(--pine); color: #fff; font-size: .9rem;
-}
-.identity span { display: grid; font-weight: 800; line-height: 1.2; }
+.identity-logo { flex: none; width: 130px; height: auto; border-radius: 6px; }
 .identity small { color: var(--muted); font-size: .84rem; font-weight: 700; }
 nav { display: flex; gap: 6px; color: var(--muted); font-size: .92rem; font-weight: 700; }
 nav a { padding: 12px 10px; border-radius: 10px; }
@@ -259,7 +255,7 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .footer-brand { display: flex; align-items: center; gap: 12px; flex: none; }
 .footer-brand small { color: var(--muted); font-size: .82rem; font-weight: 700; white-space: nowrap; }
-.footer-brand img { width: 190px; }
+.footer-brand img { width: 130px; height: auto; border-radius: 6px; }
 .footer-inner p { margin: 0; color: var(--pine); font-size: .92rem; font-weight: 800; text-align: right; }
 .footer-inner p span { color: var(--muted); font-size: .86rem; font-weight: 600; }
 .footer-link { display: inline-block; padding: 6px 0; color: var(--pine); font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
@@ -315,7 +311,6 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .detail { padding: 0 16px 18px; }
   .card { padding: 22px 20px; }
   .card-actions .btn-line { flex: 1 1 auto; }
-  .footer-brand img { width: 160px; }
 }
 
 @media (max-width: 700px) {
