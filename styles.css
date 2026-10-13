@@ -106,6 +106,12 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
 .hero { padding: 68px 0 96px; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 64px; align-items: center; }
 .course { margin: 24px 0 12px; color: var(--pine); font-weight: 800; }
+.support-badge {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+  margin: 8px 0 0; padding: 9px 18px 9px 9px;
+  border: 2px solid var(--pine); border-radius: 18px; background: #fff; font-weight: 700;
+}
+.support-badge b { padding: 5px 13px; border-radius: 999px; background: var(--pine); color: #fff; font-size: .95rem; font-weight: 800; }
 .facts { display: flex; flex-wrap: wrap; gap: 16px 0; margin: 30px 0 0; }
 .facts div { padding: 0 22px; border-left: 2px solid var(--line); }
 .facts div:first-child { padding-left: 0; border-left: 0; }
@@ -173,21 +179,17 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
 .flow strong { line-height: 1.4; }
 .flow small { margin-top: 6px; color: var(--muted); font-size: .86rem; }
 
-/* ---------- 패널(시간표 · 장소) ---------- */
+/* ---------- 패널(Claude 계정 지원 · 장소) ---------- */
 .panel { border-radius: 40px; background: var(--mist); }
 .inner { padding: 80px max(24px, calc((100% - 920px) / 2)); }
-.table-card { overflow: hidden; border-radius: var(--radius); background: #fff; box-shadow: 0 8px 24px rgba(18, 50, 56, .09); }
-.timetable { width: 100%; border-collapse: collapse; }
-.timetable th, .timetable td { padding: 15px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-.timetable thead th { background: var(--pine); color: #fff; font-size: .9rem; }
-.timetable tbody th { width: 5.2em; color: var(--pine); font-weight: 800; white-space: nowrap; }
-.timetable .time { width: 8.2em; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700; }
-.timetable tbody tr:last-child th, .timetable tbody tr:last-child td { border-bottom: 0; }
-.timetable .gap th, .timetable .gap td {
-  background: repeating-linear-gradient(135deg, #f6f3ea 0 10px, #fbf9f3 10px 20px);
-  color: var(--muted); font-weight: 600;
+.support { background: var(--pine-deep); color: #fff; }
+.support-box { max-width: 760px; margin: 0 auto; text-align: center; }
+.support-chip {
+  display: inline-block; margin: 0 0 20px; padding: 7px 18px; border-radius: 999px;
+  background: var(--sun); color: #3a2f0e; font-size: .95rem; font-weight: 800;
 }
-.table-note { margin: 18px 4px 0; color: var(--muted); font-weight: 700; }
+.support mark { background: none; color: var(--sun); }
+.support .lead { margin: 18px 0 0; color: #c6dcd9; }
 .tag {
   display: inline-block; padding: 1px 9px; border-radius: 999px;
   background: #fbe6de; color: #96391f; font-size: .82rem; font-weight: 800; white-space: nowrap;
@@ -301,9 +303,6 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .stats div:nth-child(3) { border-left: 0; }
   .panel { border-radius: 28px; }
   .inner { padding: 56px 16px; }
-  .timetable th, .timetable td { padding: 13px 10px; }
-  .timetable tbody th { width: 3.9em; }
-  .timetable .time { width: 6.6em; font-size: .94rem; }
   .timeline::before { left: 20px; }
   .item { padding-left: 54px; }
   .badge { width: 42px; height: 42px; font-size: .9rem; }

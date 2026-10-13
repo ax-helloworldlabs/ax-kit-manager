@@ -6,9 +6,9 @@
 
 | 고치려는 것 | 파일 | 위치 |
 |---|---|---|
-| 날짜·시간·총 시간 | `index.html` | ① Hero의 `facts`·`ticket`, ② `stats`, ④ 시간표 제목, ⑥ 일정 카드, `<head>`의 description — **여러 곳에 반복되므로 모두 같이 고칩니다** |
+| 날짜·시간·총 시간 | `index.html` | ① Hero의 `facts`·`ticket`, ② `stats`, ⑥ 일정 카드, `<head>`의 description — **여러 곳에 반복되므로 모두 같이 고칩니다** |
 | 장소 | `index.html` | ① Hero `ticket-list`, ⑥ 장소 카드(주소 문구와 지도 검색 링크), `<head>`의 og:description |
-| 교시별 시간표 | `index.html` | ④ `<table class="timetable">` |
+| Claude 계정 지원 문구 | `index.html` | ① Hero의 `support-badge`·`ticket` 지원 행, ④ `id="support"` 패널, `<head>`의 description — 지원 조건 등 세부는 확정된 내용만 추가합니다 |
 | 모듈별 내용 | `index.html` | ⑤ `<div class="timeline">` 안의 `<details>` 5개, ③ `flow` 목록 |
 | SafariON 링크, 카카오톡 채널 문의 링크 | `index.html` | ⑦ `id="materials"`의 카드 2개 (Hero 메모와 "교육 자료 보기" 링크가 이 위치를 가리킴) |
 | 웹사이트 링크 | `index.html` | 맨 아래 `<footer>` |
@@ -17,7 +17,7 @@
 
 ## 수정 후 꼭 할 일
 
-`index.html` 상단의 `styles.css?v=20261012-7`, `script.js?v=20261012-7`에서 마지막 숫자를 1씩 올립니다(예: `-8`). 올리지 않으면 방문자 브라우저에 예전 파일이 남아 있을 수 있습니다.
+`index.html` 상단의 `styles.css?v=20261013-1`, `script.js?v=20261013-1`에서 마지막 숫자를 1씩 올립니다(예: `-2`). 올리지 않으면 방문자 브라우저에 예전 파일이 남아 있을 수 있습니다.
 
 ## 공개 페이지 주의 사항
 
