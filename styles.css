@@ -37,10 +37,6 @@ h1, h2, h3 { margin: 0; }
 ul, ol { margin: 0; padding: 0; }
 
 .wrap { width: min(calc(100% - 48px), 1120px); margin-inline: auto; }
-.sr-only {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
-}
 .skip {
   position: fixed; top: -80px; left: 16px; z-index: 100;
   padding: 12px 16px; border-radius: 10px; background: #fff; color: var(--pine); font-weight: 800;
@@ -79,6 +75,7 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
 .title { max-width: 760px; margin: 0 auto 44px; text-align: center; }
 .title .lead { margin: 18px 0 0; }
 .section { padding: 96px 0; }
+.section + .section { padding-top: 0; }  /* 교육 소개 → 모듈별 교육 내용은 한 흐름으로 */
 
 /* ---------- 버튼 ---------- */
 .btn {
@@ -153,17 +150,6 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
 .memo b { font-size: 1.02rem; line-height: 1.35; }
 .memo span { font-size: .86rem; }
 
-/* ---------- 핵심 수치 ---------- */
-.stats {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  padding: 34px 24px; border-radius: 30px; background: var(--pine-deep); color: #fff; text-align: center;
-}
-.stats div { padding: 4px 12px; }
-.stats div + div { border-left: 1px solid rgba(255, 255, 255, .18); }
-.stats b, .stats span { display: block; }
-.stats b { font-size: clamp(1.5rem, 3.4vw, 2rem); line-height: 1.3; }
-.stats span { color: #c6dcd9; font-size: .9rem; }
-
 /* ---------- 진행 흐름 ---------- */
 .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; list-style: none; text-align: center; }
 .flow li { position: relative; padding: 0 4px; }
@@ -179,7 +165,7 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
 .flow strong { line-height: 1.4; }
 .flow small { margin-top: 6px; color: var(--muted); font-size: .86rem; }
 
-/* ---------- 패널(Claude 계정 지원 · 장소) ---------- */
+/* ---------- 패널(장소 · Claude 유료 계정 지원) ---------- */
 .panel { border-radius: 40px; background: var(--mist); }
 .inner { padding: 80px max(24px, calc((100% - 920px) / 2)); }
 .support { background: var(--pine-deep); color: #fff; }
@@ -188,7 +174,7 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
   display: inline-block; margin: 0 0 20px; padding: 7px 18px; border-radius: 999px;
   background: var(--sun); color: #3a2f0e; font-size: .95rem; font-weight: 800;
 }
-.support mark { background: none; color: var(--sun); }
+.support mark { background: none; color: var(--sun); white-space: nowrap; }
 .support .lead { margin: 18px 0 0; color: #c6dcd9; }
 .tag {
   display: inline-block; padding: 1px 9px; border-radius: 999px;
@@ -202,6 +188,16 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
   background: linear-gradient(var(--pine), var(--pine-soft)); content: "";
 }
 .item { position: relative; margin-bottom: 20px; padding-left: 70px; }
+.break {
+  position: relative; display: flex; align-items: center; gap: 10px;
+  margin: 0 0 20px 70px; padding: 10px 18px; border: 1px dashed var(--line); border-radius: 14px;
+  color: var(--muted); font-size: .95rem;
+}
+.break b { color: var(--pine); font-weight: 800; }
+.break::before {
+  position: absolute; top: 50%; left: -52px; width: 14px; height: 14px; margin-top: -7px;
+  border: 3px solid var(--pine-soft); border-radius: 50%; background: var(--paper); content: "";
+}
 .badge {
   position: absolute; top: 12px; left: 0; display: grid; place-items: center; width: 50px; height: 50px;
   border-radius: 50%; background: var(--pine); color: #fff; font-weight: 800; box-shadow: 0 0 0 6px var(--paper);
@@ -236,11 +232,11 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 
 /* ---------- 교육 자료 · 문의 (링크 카드) ---------- */
 .materials {
-  width: min(calc(100% - 48px), 1120px); margin: 96px auto 90px; padding: 88px 70px;
+  width: min(calc(100% - 48px), 1120px); margin: 96px auto 90px; padding: 88px 56px;
   border-radius: 38px; background: var(--mist);
 }
 .materials .title { margin-bottom: 0; }
-.material-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 42px; }
+.material-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 42px; }
 .material-card {
   min-height: 178px; padding: 29px; border: 2px solid var(--pine);
   border-radius: 22px 22px 6px 22px; background: var(--paper);
@@ -280,6 +276,7 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .flow strong { align-self: end; }
   .flow li + li::before { top: -22px; right: auto; left: 27px; width: 0; height: 22px; border-top: 0; border-left: 2px dashed var(--line); }
   .cards { grid-template-columns: 1fr; }
+  .material-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-inner p { text-align: left; }
 }
@@ -299,12 +296,12 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .blob { inset: -3% -12% 8% 14%; }
   .ticket { padding: 30px 22px 22px; }
   .memo { right: 4px; width: 186px; }
-  .stats { grid-template-columns: 1fr 1fr; gap: 18px 0; padding: 26px 12px; border-radius: 24px; }
-  .stats div:nth-child(3) { border-left: 0; }
   .panel { border-radius: 28px; }
   .inner { padding: 56px 16px; }
   .timeline::before { left: 20px; }
   .item { padding-left: 54px; }
+  .break { margin-left: 54px; padding: 9px 14px; }
+  .break::before { left: -40px; }
   .badge { width: 42px; height: 42px; font-size: .9rem; }
   summary { gap: 10px; padding: 14px 14px; }
   .detail { padding: 0 16px 18px; }

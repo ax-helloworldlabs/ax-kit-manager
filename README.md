@@ -6,18 +6,22 @@
 
 | 고치려는 것 | 파일 | 위치 |
 |---|---|---|
-| 날짜·시간·총 시간 | `index.html` | ① Hero의 `facts`·`ticket`, ② `stats`, ⑥ 일정 카드, `<head>`의 description — **여러 곳에 반복되므로 모두 같이 고칩니다** |
-| 장소 | `index.html` | ① Hero `ticket-list`, ⑥ 장소 카드(주소 문구와 지도 검색 링크), `<head>`의 og:description |
-| Claude 계정 지원 문구 | `index.html` | ① Hero의 `support-badge`·`ticket` 지원 행, ④ `id="support"` 패널, `<head>`의 description — 지원 조건 등 세부는 확정된 내용만 추가합니다 |
-| 모듈별 내용 | `index.html` | ⑤ `<div class="timeline">` 안의 `<details>` 5개, ③ `flow` 목록 |
-| SafariON 링크, 카카오톡 채널 문의 링크 | `index.html` | ⑦ `id="materials"`의 카드 2개 (Hero 메모와 "교육 자료 보기" 링크가 이 위치를 가리킴) |
+| 날짜·시간·총 시간 | `index.html` | ① Hero의 `facts`·`ticket`, ② 일시 카드, ④ 모듈별 교시·시간, `<head>`의 description — **여러 곳에 반복되므로 모두 같이 고칩니다** |
+| 장소 | `index.html` | ① Hero `ticket-list`, ② `id="place"` 장소 카드(주소 문구와 지도 검색 링크), `<head>`의 og:description |
+| 모듈별 내용 | `index.html` | ③ `flow` 목록, ④ `<div class="timeline">` 안의 `<details>` 5개(02와 03 사이 `break`는 점심시간 표시) |
+| Claude 유료 계정 지원 문구 | `index.html` | 상단 메뉴, ① Hero의 `support-badge`, ⑤ `id="support"` 패널, `<head>`의 description·og:description — 요금제·기간·지급 방식 같은 세부는 확정된 내용만 추가합니다 |
+| SafariON 링크, 교육 사전 안내 PDF, 카카오톡 채널 문의 링크 | `index.html` | ⑥ `id="materials"`의 카드 3개 (Hero 메모와 "교육 자료 보기" 링크, ⑤ 패널의 문의 안내가 이 위치를 가리킴) |
 | 웹사이트 링크 | `index.html` | 맨 아래 `<footer>` |
 | 색 | `styles.css` | 맨 위 `:root` 토큰 |
 | 이미지 | `assets/` | 파일명은 영문 소문자. 바꾸면 `index.html`의 `src`도 같이 수정 |
 
+## 페이지 순서
+
+수강생이 궁금해하는 순서대로 놓았습니다: ① Hero(일정·시간 요약) → ② 일정·장소 → ③ 교육 소개·진행 흐름 → ④ 모듈별 교육 내용 → ⑤ Claude 유료 계정 지원 → ⑥ 교육 자료·문의. 섹션을 옮기면 상단 메뉴 순서도 같이 맞춥니다.
+
 ## 수정 후 꼭 할 일
 
-`index.html` 상단의 `styles.css?v=20261013-1`, `script.js?v=20261013-1`에서 마지막 숫자를 1씩 올립니다(예: `-2`). 올리지 않으면 방문자 브라우저에 예전 파일이 남아 있을 수 있습니다.
+`index.html` 상단의 `styles.css?v=20261013-2`, `script.js?v=20261013-2`에서 마지막 숫자를 1씩 올립니다(예: `-3`). 올리지 않으면 방문자 브라우저에 예전 파일이 남아 있을 수 있습니다.
 
 ## 공개 페이지 주의 사항
 
@@ -29,7 +33,7 @@
 
 ## 아직 넣지 않은 정보
 
-자료에서 확인되지 않아 페이지에 넣지 않은 항목입니다. 확정되면 ⑥ 일정·장소 섹션에 카드를 추가하면 됩니다.
+자료에서 확인되지 않아 페이지에 넣지 않은 항목입니다. 확정되면 ② 일정·장소 섹션에 카드를 추가하면 됩니다.
 
 - 준비물, 주차, 식사 제공 여부
 - 수료 기준, 교육비, 대상 조건, 정원, 주관기관
