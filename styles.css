@@ -34,6 +34,9 @@ img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 p { margin: 0 0 1em; }
 h1, h2, h3 { margin: 0; }
+h1, h2, h3, .lead { text-wrap: balance; }
+p, dd, li { text-wrap: pretty; }
+.nowrap { white-space: nowrap; }
 ul, ol { margin: 0; padding: 0; }
 
 .wrap { width: min(calc(100% - 48px), 1120px); margin-inline: auto; }

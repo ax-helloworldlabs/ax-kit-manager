@@ -37,7 +37,7 @@
   if (copyBtn && address && navigator.clipboard && navigator.clipboard.writeText) {
     copyBtn.hidden = false;
     copyBtn.addEventListener('click', function () {
-      navigator.clipboard.writeText(address.textContent.trim()).then(function () {
+      navigator.clipboard.writeText((address.dataset.copy || address.textContent).trim()).then(function () {
         status.textContent = '주소를 복사했습니다.';
       }, function () {
         status.textContent = '복사하지 못했습니다. 주소를 길게 눌러 직접 복사해 주세요.';
