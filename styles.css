@@ -230,6 +230,11 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .copy-status { min-height: 1.6em; margin-top: 8px; color: var(--pine); font-size: .9rem; font-weight: 700; }
 
+/* ---------- 교육 계정 정보 확인 ---------- */
+.account { padding-bottom: 0; }
+.account .title { margin-bottom: 0; }
+.account-btn { gap: 8px; margin-top: 28px; }
+
 /* ---------- 교육 자료 · 문의 (링크 카드) ---------- */
 .materials {
   width: min(calc(100% - 48px), 1120px); margin: 96px auto 90px; padding: 88px 56px;
