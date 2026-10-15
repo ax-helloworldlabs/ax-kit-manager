@@ -230,10 +230,23 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .card-label { margin: 0 0 6px; color: var(--coral); font-size: .86rem; font-weight: 800; }
 .card h3 { margin-bottom: 8px; font-size: 1.35rem; }
 .card p { margin-bottom: 0; color: #3d4c4e; }
-.card-place { grid-row: span 2; }
-.card .card-note { margin-top: 10px; padding: 10px 14px; border-radius: 12px; background: var(--mist); color: var(--pine); font-size: .92rem; font-weight: 600; }
+/* 일정·장소 안내표 */
+.venue {
+  max-width: 820px; margin: 0 auto; padding: 8px 40px; border-top: 6px solid var(--pine);
+  border-radius: var(--radius); background: #fff; box-shadow: 0 8px 24px rgba(18, 50, 56, .09);
+}
+.venue-row { display: grid; grid-template-columns: 96px 1fr; gap: 24px; padding: 28px 0; }
+.venue-row + .venue-row { border-top: 1px solid var(--line); }
+.venue dt { padding-top: 3px; color: var(--coral); font-size: .9rem; font-weight: 800; }
+.venue dd { margin: 0; }
+.venue strong { display: block; margin-bottom: 6px; font-size: 1.25rem; line-height: 1.45; }
+.venue p { margin: 0; color: #3d4c4e; }
+.venue .venue-tip { margin-top: 10px; color: var(--muted); font-size: .94rem; }
+.venue .venue-tip::before { content: "※ "; }
+.venue .card-actions { margin-top: 18px; }
 .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-.copy-status { min-height: 1.6em; margin-top: 8px; color: var(--pine); font-size: .9rem; font-weight: 700; }
+.copy-status:empty { display: none; }
+.copy-status { margin-top: 8px; color: var(--pine); font-size: .9rem; font-weight: 700; }
 
 /* ---------- 교육 자료 · 문의 (링크 카드) ---------- */
 .materials {
@@ -281,7 +294,6 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .flow strong { align-self: end; }
   .flow li + li::before { top: -22px; right: auto; left: 27px; width: 0; height: 22px; border-top: 0; border-left: 2px dashed var(--line); }
   .cards { grid-template-columns: 1fr; }
-  .card-place { grid-row: auto; }
   .material-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-inner p { text-align: left; }
@@ -313,6 +325,9 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .detail { padding: 0 16px 18px; }
   .card { padding: 22px 20px; }
   .card-actions .btn-line { flex: 1 1 auto; }
+  .venue { padding: 4px 20px; }
+  .venue-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+  .venue strong { font-size: 1.12rem; }
 }
 
 @media (max-width: 700px) {
