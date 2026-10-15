@@ -200,6 +200,8 @@ mark { background: linear-gradient(transparent 62%, rgba(241, 198, 103, .75) 0);
   color: var(--muted); font-size: .95rem;
 }
 .break b { color: var(--pine); font-weight: 800; }
+.break.edge { border: 0; background: var(--mist); color: var(--pine); font-weight: 700; }
+.break.edge::before { border-color: var(--pine); background: var(--pine); }
 .break::before {
   position: absolute; top: 50%; left: -52px; width: 14px; height: 14px; margin-top: -7px;
   border: 3px solid var(--pine-soft); border-radius: 50%; background: var(--paper); content: "";
