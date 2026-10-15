@@ -246,8 +246,7 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .venue dd { margin: 0; }
 .venue strong { display: block; margin-bottom: 6px; font-size: 1.25rem; line-height: 1.45; }
 .venue p { margin: 0; color: #3d4c4e; }
-.venue .venue-tip { margin-top: 10px; color: var(--muted); font-size: .94rem; }
-.venue .venue-tip::before { content: "※ "; }
+.venue .venue-tip { margin-top: 14px; }
 .venue .card-actions { margin-top: 18px; }
 .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .copy-status:empty { display: none; }
