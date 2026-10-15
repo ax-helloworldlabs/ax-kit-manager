@@ -269,11 +269,6 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .prep-must p { margin: 0; color: #3d4c4e; }
 .prep-must .prep-tag { color: #fff; }
 .prep-must .prep-warn { margin-top: 4px; color: var(--muted); font-size: .94rem; }
-.prep-check { max-width: 820px; margin: 20px auto 0; padding: 6px 32px; border-radius: var(--radius); background: var(--mist); }
-.prep-check div { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 16px 0; }
-.prep-check div + div { border-top: 1px solid var(--line); }
-.prep-check dt { color: var(--pine); font-weight: 800; }
-.prep-check dd { margin: 0; color: #3d4c4e; }
 
 /* ---------- 교육 자료 · 문의 (링크 카드) ---------- */
 .materials {
@@ -357,9 +352,7 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .prep { padding-top: 68px; }
   .prep-must { grid-template-columns: 1fr; gap: 14px; }
   .prep-must article { padding: 24px 20px; }
-  .prep-check { padding: 4px 20px; }
-  .prep-check div { grid-template-columns: 1fr; gap: 2px; padding: 14px 0; }
-  .venue-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+      .venue-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
   .venue strong { font-size: 1.12rem; }
 }
 
