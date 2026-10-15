@@ -246,11 +246,33 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
 .venue dd { margin: 0; }
 .venue strong { display: block; margin-bottom: 6px; font-size: 1.25rem; line-height: 1.45; }
 .venue p { margin: 0; color: #3d4c4e; }
+.venue-sub { margin-left: 6px; color: var(--muted); font-size: .9rem; font-weight: 600; white-space: nowrap; }
+.materials-note a { color: var(--pine); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 .venue .venue-tip { margin-top: 14px; padding-left: 1.15em; text-indent: -1.15em; font-size: .94rem; }
 .venue .card-actions { margin-top: 18px; }
 .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .copy-status:empty { display: none; }
 .copy-status { margin-top: 8px; color: var(--pine); font-size: .9rem; font-weight: 700; }
+
+/* ---------- 준비물 체크리스트 ---------- */
+.prep { padding: 96px 0 0; }
+.prep-list {
+  max-width: 820px; margin: 0 auto; padding: 8px 40px; list-style: none;
+  border-top: 6px solid var(--pine); border-radius: var(--radius); background: #fff; box-shadow: 0 8px 24px rgba(18, 50, 56, .09);
+}
+.prep-list li { display: grid; grid-template-columns: 32px 1fr; gap: 18px; padding: 24px 0; }
+.prep-list li + li { border-top: 1px solid var(--line); }
+.prep-list .check {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+  background: var(--mist); color: var(--pine); font-weight: 900;
+}
+.prep-list .must .check { background: var(--pine); color: #fff; }
+.prep-list strong { display: block; margin-bottom: 4px; font-size: 1.12rem; line-height: 1.45; }
+.prep-list em {
+  display: inline-block; margin-left: 6px; padding: 1px 9px; border-radius: 999px; vertical-align: 2px;
+  background: var(--coral); color: #fff; font-size: .78rem; font-style: normal; font-weight: 800;
+}
+.prep-list p { margin: 0; color: #3d4c4e; }
 
 /* ---------- 교육 자료 · 문의 (링크 카드) ---------- */
 .materials {
@@ -289,7 +311,7 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
    반응형
    ========================================================== */
 @media (max-width: 900px) {
-  nav a[href="#curriculum"] { display: none; }
+  nav a[href="#curriculum"], nav a[href="#prep"] { display: none; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-grid { gap: 56px; }
   .visual { width: min(100%, 500px); margin-inline: auto; }
@@ -331,6 +353,10 @@ details[open] .plus { background: var(--pine); border-color: var(--pine); color:
   .card { padding: 22px 20px; }
   .card-actions .btn-line { flex: 1 1 auto; }
   .venue { padding: 4px 20px; }
+  .prep { padding-top: 68px; }
+  .prep-list { padding: 4px 20px; }
+  .prep-list li { grid-template-columns: 28px 1fr; gap: 14px; padding: 20px 0; }
+  .prep-list .check { width: 28px; height: 28px; }
   .venue-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
   .venue strong { font-size: 1.12rem; }
 }

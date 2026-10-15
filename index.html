@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231c4a52'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="styles.css?v=20261015-13">
-  <script src="script.js?v=20261015-13" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261016-2">
+  <script src="script.js?v=20261016-2" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -25,6 +25,7 @@
     </a>
     <nav aria-label="주요 메뉴">
       <a href="#place">일정·장소</a>
+      <a href="#prep">준비물</a>
       <a href="#curriculum">교육 내용</a>
       <a href="#support">Claude 계정 지원·정보</a>
       <a href="#materials">교육 자료</a>
@@ -99,7 +100,7 @@
           <div class="venue-row">
             <dt>장소</dt>
             <dd>
-              <strong>향군타워 9층 솔트룩스 소강의장</strong>
+              <strong>향군타워 9층 솔트룩스 소강의장 <small class="venue-sub">잠실역 인근</small></strong>
               <p id="address" data-copy="서울 송파구 올림픽로35길 123, 향군타워 9층 솔트룩스 소강의장">서울 송파구 올림픽로35길 123, 향군타워 9층 솔트룩스 소강의장</p>
               <p class="venue-tip">※ 쿠차라 방면 엘리베이터를 이용하면 보안게이트 통과 없이 9층으로 바로 올라오실 수 있습니다.</p>
               <p class="card-actions">
@@ -121,7 +122,40 @@
     </section>
   </div>
 
-  <!-- ③ 교육 소개 + 진행 흐름 -->
+  <!-- ③ 준비물 (교육 전 확인) -->
+  <section class="prep" id="prep" aria-labelledby="prep-title">
+    <div class="wrap">
+      <div class="title reveal">
+        <p class="eyebrow">준비물</p>
+        <h2 id="prep-title">노트북과 신분증은<br>필수입니다</h2>
+        <p class="lead">교육 전 아래 준비물과 안내를 확인해 주세요.</p>
+      </div>
+      <ul class="prep-list reveal">
+          <li class="must">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>신분증 필수 지참 <em>필수</em></strong><p>실물 신분증 또는 모바일 신분증만 가능합니다. 캡처본이나 사진은 사용할 수 없으니 교육 당일 반드시 준비해 주세요.</p></div>
+          </li>
+          <li class="must">
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>개인 노트북 <em>필수</em></strong><p>Claude 실습에 사용할 노트북을 가져와 주세요.</p></div>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>노트북 충전기</strong><p>하루 동안 실습하므로 함께 챙겨 주세요.</p></div>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>교육 시작 시간 확인</strong><p>10월 16일 금요일, <span class="nowrap">오전 9시에 시작합니다.</span></p></div>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            <div><strong>교육장 위치와 이동 경로 확인</strong><p>향군타워 9층 솔트룩스 소강의장 · <span class="nowrap">출발 전</span> 주소를 확인해 주세요.</p></div>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ④ 교육 소개 + 진행 흐름 -->
   <section class="section" id="intro">
     <div class="wrap">
       <div class="title reveal">
@@ -256,7 +290,7 @@
         <span>문의하기 <span aria-hidden="true">↗</span></span>
       </a>
     </div>
-    <p class="materials-note">궁금한 점은 위 <span class="nowrap">카카오톡 채널 ‘Hello, AX’로</span> 문의해 주세요.</p>
+    <p class="materials-note">궁금한 점은 위 <span class="nowrap">카카오톡 채널 ‘Hello, AX’</span> 또는 <span class="nowrap">전화 <a href="tel:07088337771">070-8833-7771</a></span>로 문의해 주세요.<br>문의 시 <span class="nowrap">‘10월 16일 AX 키트 관리자·팀장’</span>이라고 말씀해 주세요.</p>
   </section>
 
 </main>
